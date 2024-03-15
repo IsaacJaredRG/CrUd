@@ -1,0 +1,38 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="text-uppercase">EDITAR MENSAJE</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/edit/{{mensaje.id}}" method="post">
+                    <div class="input-group mt-2">
+                        <label for="remitente" class="input-group-text">Remitente</label>
+                        <input class="form-control" type="text" name="remitente" id="remitente" value="{{mensaje.remitente}}" placeholder="Ejemplo: Luis Angel" autofocus required>
+                    </div>
+                    <div class="input-group mt-2">
+                        <label for="mensaje_corto" class="input-group-text">Mensaje</label>
+                        <input class="form-control" type="text" name="mensaje_corto" id="mensaje_corto" value="{{mensaje.mensaje_corto}}"  required>
+                    </div>
+                    <div class="input-group mt-2">
+                        <label for="receptor" class="input-group-text">Remitente</label>
+                        <input class="form-control" type="text" name="receptor" id="receptor" value="{{mensaje.receptor}}"  required>
+                    </div>
+                    <div class="input-group mt-2">
+                        <label for="fecha" class="input-group-text">Fecha</label>
+                        <input class="form-control" type="date" name="fecha" id="fecha" value="{{mensaje.fecha}}"  required>
+                    </div>
+                    <div class="input-group mt-2">
+                        <label for="asunto" class="input-group-text">Asunto</label>
+                        <input class="form-control" type="text" name="asunto" id="asunto" value="{{mensaje.asunto}}"  required>
+                    </div>                                    
+                    <div class="form-group mt-4 d-grid gap-2">
+                        <button class="btn btn-success"> Actualizar</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

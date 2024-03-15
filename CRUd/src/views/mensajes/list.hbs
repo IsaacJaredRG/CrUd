@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row mt-5">
+        {{#if mensajes}}
+        <table class=" table text-center" style="width:1080px;">
+            <thead>
+                <tr class="table-dark mx-auto">
+                    <th>remitente</th>
+                    <th>mensaje_corto</th>
+                    <th>receptor</th>
+                    <th>fecha</th>
+                    <th>asunto</th>
+                    <th>acciones</th>
+                </tr>    
+            </thead>
+            <tbody>
+                {{#each mensajes}}
+                    <tr>
+                        <td>{{remitente}}</td>
+                        <td>{{mensaje_corto}}</td>
+                        <td>{{receptor}}</td>
+                        <td>{{fecha}}</td>
+                        <td>{{asunto}}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="/edit/{{id}}" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/delete/{{id}}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+            <tfoot>
+                <tr class="table-dark">
+                    <td colspan="4">REGISTRO DE MENSAJES</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        {{else}}
+            <div class="card text-center mx-auto" style="width:350px;">
+                <div class="card-header">
+                    <h3>Debes crear un mensaje</h3>
+                </div>
+                <div class="card-body">
+                    <p>Presiona este boton para que puedas registrar un mensaje en la aplicacion</p>
+                    <a href="/add" class="btn btn-primary">Ir a crear</a>
+                </div>
+        
+            </div>
+        {{/if}}
+    </div>
+</div>
